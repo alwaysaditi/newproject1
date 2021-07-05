@@ -9,143 +9,144 @@ class UserList extends StatelessWidget {
           title: Center(
             child: Text('Registered Users'),
           ),
-          backgroundColor: Colors.teal[200]),
+          backgroundColor: Colors.blue[200]),
+          backgroundColor: Colors.blue[100],
       body: Center(
         child: SingleChildScrollView(
           child: Wrap(
-            
             children: [
-              Card(  
-                child: Column(  
-                  mainAxisSize: MainAxisSize.min,  
-                  children: <Widget>[  
-                    const ListTile(  
-                      leading: Icon(FontAwesomeIcons.laugh),  
-                      title: Text('Sonu Nigam',
-                      
-                      ),  
-                      subtitle: Text('Best of Sonu Nigam Song',
-                      ),  
-                    ),  
-                  ],  
-                ),  
+              Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const ListTile(
+                      leading: Icon(FontAwesomeIcons.laugh),
+                      title: Text(
+                        'Aditi Paretkar',
+                      ),
+                      subtitle: Text(
+                        'aditiparetkar@gmail.com',
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              Card(  
-            child: Column(  
-              mainAxisSize: MainAxisSize.min,  
-              children: <Widget>[  
-          const ListTile(  
-            leading: Icon(FontAwesomeIcons.laugh),  
-            title: Text('Sonu Nigam'),  
-            subtitle: Text('Best of Sonu Nigam Song'),  
-          ),  
-              ],  
-            ),  
-          ),
-              Card(  
-            child: Column(  
-              mainAxisSize: MainAxisSize.min,  
-              children: <Widget>[  
-          const ListTile(  
-            leading: Icon(FontAwesomeIcons.laugh),  
-            title: Text('Sonu Nigam'),  
-            subtitle: Text('Best of Sonu Nigam Song'),  
-          ),  
-              ],  
-            ),  
-          ),
-              Card(  
-            child: Column(  
-              mainAxisSize: MainAxisSize.min,  
-              children: <Widget>[  
-          const ListTile(  
-            leading: Icon(FontAwesomeIcons.laugh),  
-            title: Text('Sonu Nigam'),  
-            subtitle: Text('Best of Sonu Nigam Song'),  
-          ),  
-              ],  
-            ),  
-          ),
-              Card(  
-            child: Column(  
-              mainAxisSize: MainAxisSize.min,  
-              children: <Widget>[  
-          const ListTile(  
-            leading: Icon(FontAwesomeIcons.laugh),  
-            title: Text('Sonu Nigam'),  
-            subtitle: Text('Best of Sonu Nigam Song'),  
-          ),  
-              ],  
-            ),  
-          ),
-              Card(  
-            child: Column(  
-              mainAxisSize: MainAxisSize.max,  
-              children: <Widget>[  
-          const ListTile(  
-            leading: Icon(FontAwesomeIcons.laugh),  
-            title: Text('Sonu Nigam'),  
-            subtitle: Text('Best of Sonu Nigam Song'),  
-          ),  
-              ],  
-            ),  
-          ),
-              Card(  
-            child: Column(  
-              mainAxisSize: MainAxisSize.min,  
-              children: <Widget>[  
-          const ListTile(  
-            leading: Icon(FontAwesomeIcons.laugh),  
-            title: Text('Sonu Nigam'),  
-            subtitle: Text('Best of Sonu Nigam Song'),  
-          ),  
-              ],  
-            ),  
-          ),
-              Card(  
-            child: Column(  
-              mainAxisSize: MainAxisSize.min,  
-              children: <Widget>[  
-          const ListTile(  
-            leading: Icon(FontAwesomeIcons.laugh),  
-            title: Text('Sonu Nigam'),  
-            subtitle: Text('Best of Sonu Nigam Song'),  
-          ),  
-              ],  
-            ),  
-          ),  Card(  
-            child: Column(  
-              mainAxisSize: MainAxisSize.min,  
-              children: <Widget>[  
-          const ListTile(  
-            leading: Icon(FontAwesomeIcons.laugh),  
-            title: Text('Sonu Nigam'),  
-            subtitle: Text('Best of Sonu Nigam Song'),  
-          ),  
-              ],  
-            ),  
-          ),
-              Card(  
-            child: Column(  
-              mainAxisSize: MainAxisSize.min,  
-              children: <Widget>[  
-          const ListTile(  
-            leading: Icon(FontAwesomeIcons.laugh),  
-            title: Text('Sonu Nigam'),  
-            subtitle: Text('Best of Sonu Nigam Song'),  
-          ),  
-              ],  
-            ),  
-          ),
-             
-          Center(
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: Text('Go back!'),
-            ),
-          )
+              Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const ListTile(
+                      leading: Icon(FontAwesomeIcons.laugh),
+                      title: Text('Arvind Paretkar'),
+                      subtitle: Text('arvindparetkar@gmail.com'),
+                    ),
+                  ],
+                ),
+              ),
+              Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const ListTile(
+                      leading: Icon(FontAwesomeIcons.laugh),
+                      title: Text('Ashwini Paretkar'),
+                      subtitle: Text('ashparetkar@gmail.com'),
+                    ),
+                  ],
+                ),
+              ),
+              Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const ListTile(
+                      leading: Icon(FontAwesomeIcons.laugh),
+                      title: Text('Vishakha Paretkar'),
+                      subtitle: Text('vishkaha.cp@gmail.com'),
+                    ),
+                  ],
+                ),
+              ),
+              Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const ListTile(
+                      leading: Icon(FontAwesomeIcons.laugh),
+                      title: Text('Robert Green'),
+                      subtitle: Text('robert.vg@gmail.com'),
+                    ),
+                  ],
+                ),
+              ),
+              Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: <Widget>[
+                    const ListTile(
+                      leading: Icon(FontAwesomeIcons.laugh),
+                      title: Text('Arthur Hayden'),
+                      subtitle: Text('arthur01@gmail.com'),
+                    ),
+                  ],
+                ),
+              ),
+              Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const ListTile(
+                      leading: Icon(FontAwesomeIcons.laugh),
+                      title: Text('Daniel Brown'),
+                      subtitle: Text('daniel.b101@gmail.com'),
+                    ),
+                  ],
+                ),
+              ),
+              Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const ListTile(
+                      leading: Icon(FontAwesomeIcons.laugh),
+                      title: Text('Cathy Lane'),
+                      subtitle: Text('cathy.rp@gmail.com'),
+                    ),
+                  ],
+                ),
+              ),
+              Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const ListTile(
+                      leading: Icon(FontAwesomeIcons.laugh),
+                      title: Text('Lisa Hayden'),
+                      subtitle: Text('lisahayden@gmail.com'),
+                    ),
+                  ],
+                ),
+              ),
+              Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const ListTile(
+                      leading: Icon(FontAwesomeIcons.laugh),
+                      title: Text('Jessica Brown'),
+                      subtitle: Text('jessica.b24@gmail.com'),
+                    ),
+                  ],
+                ),
+              ),
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text('Go back!'),
+                ),
+              )
             ],
           ),
         ),
@@ -154,22 +155,3 @@ class UserList extends StatelessWidget {
   }
 }
 
-// ElevatedButton(
-//           onPressed: () {
-//             Navigator.pop(context);
-//           },
-//           child: Text('Go back!'),
-//         )
-
-
-// CARD
-
-// SizedBox(
-//                          height: 100,
-//                          child: ListTile(
-//                           leading: Icon(Icons.album),
-//                           title: Text('The Enchanted Nightingale'),
-//                           subtitle: Text(
-//                               'Music by Julie Gable. Lyrics by Sidney Stein.'),
-//                                              ),
-//                        )

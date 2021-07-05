@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'userlist.dart';
+import 'senders.dart';
 
 void main() {
   runApp(MyHomePage());
 }
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({ Key? key }) : super(key: key);
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-      return MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
@@ -19,7 +20,7 @@ class MyHomePage extends StatelessWidget {
             title: Center(child: Text('Banking Application')),
             backgroundColor: Colors.teal[200]),
         body: Builder(
-          builder: (context)=> Container(
+          builder: (context) => Container(
               constraints: BoxConstraints.expand(),
               decoration: BoxDecoration(
                   image: DecorationImage(
@@ -35,33 +36,38 @@ class MyHomePage extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => UserList()),
                       );
                     },
-                    child : const Text('View All Users'),
-                    style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.black)),
+                    child: const Text('View All Users'),
+                    style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(Colors.black)),
                   ),
-                  SizedBox(height:10),
-                   ElevatedButton(
+                  SizedBox(height: 10),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Senders()),
+                      );
+                    },
+                    child: const Text('Transfer Money'),
+                    style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(Colors.black)),
+                  ),
+                  SizedBox(height: 10),
+                  ElevatedButton(
                     onPressed: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => UserList()),
                       );
                     },
-                    child : const Text('Transfer Money'),
-                    style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.black)),
+                    child: const Text('View All Transfers'),
+                    style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(Colors.black)),
                   ),
-                  SizedBox(height:10),
-                   ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => UserList()),
-                      );
-                    },
-                    child : const Text('View All Transfers'),
-                    style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.black)),
-                  ),
-                  SizedBox(height:10),
-
+                  SizedBox(height: 10),
                 ],
               )),
         ),
@@ -70,8 +76,3 @@ class MyHomePage extends StatelessWidget {
     );
   }
 }
-
-
-
-  
-
