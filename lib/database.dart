@@ -116,6 +116,7 @@ void main() async {
        
   final List<Map<String, dynamic>> maps = await db.query('Users');
   print(maps);
+  //name of Users map is maps and Transfers map is maps1
 }
 // DatabaseHelper();
 
