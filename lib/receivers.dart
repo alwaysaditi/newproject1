@@ -1,47 +1,38 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'userlist.dart';
-import 'receivers.dart';
+import 'senders.dart';
 
-class Senders extends StatefulWidget {
-  const Senders({Key? key}) : super(key: key);
+class Receivers extends StatefulWidget {
+  const Receivers({Key? key}) : super(key: key);
 
   @override
-  _SendersState createState() => _SendersState();
+  _ReceiversState createState() => _ReceiversState();
 }
 
-double bal1 = 22000;
-double bal2 = 25000;
-double bal3 = 23000;
-double bal4 = 22000;
-double bal5 = 29000;
-double bal6 = 28000;
-double bal7 = 21000;
-double bal8 = 25000;
-double bal9 = 27000;
-double bal10 = 22000;
-int choiceofsender = 0;
+int choiceofreceivers = 0;
 
-class _SendersState extends State<Senders> {
+class _ReceiversState extends State<Receivers> {
   Senders() {
     print("Constructor called");
   }
 
   @override
   Widget build(BuildContext context) {
-    whichchoicesenders(int choice) {
-      print('$choice was pressed');
-      choiceofsender = choice;
+    whichchoicereceivers(int choice) {
+      print(
+          '$choiceofsender is choice of sender and $choice is choice of receiver');
+      choiceofreceivers = choice;
     }
 
     Container WidgetBuilder(String name, double balance, int choice) {
       return Container(
           child: ElevatedButton(
             onPressed: () {
-              whichchoicesenders(choice);
+              whichchoicereceivers(choice);
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Receivers()),
+                MaterialPageRoute(builder: (context) => UserList()),
               );
             },
             child: Column(
@@ -68,7 +59,7 @@ class _SendersState extends State<Senders> {
     return Scaffold(
       appBar: AppBar(
           title: Center(
-            child: Text('Select a Sender'),
+            child: Text('Select a Receiver'),
           ),
           backgroundColor: Colors.blue[200]),
       backgroundColor: Colors.blue[300],
