@@ -39,7 +39,7 @@ class _AmountState extends State<Amount> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ElevatedButton(onPressed: name, child: Text('thats me')),
-                  Text(""),
+                  Text("money to be transerred from"+ arr[choiceofsender-1].name+ "\n to" +arr[choiceofreceivers-1].name),
                   Center(
                     child: ElevatedButton(
                       onPressed: () {

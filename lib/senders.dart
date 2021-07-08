@@ -33,11 +33,15 @@ int choiceofsender = 0;
 class _SendersState extends State<Senders> {
   int updatebalance(double amount) {
     setState(() {
-      arr[choiceofsender].balance = arr[choiceofsender].balance - amount;
-      arr[choiceofreceivers].balance = arr[choiceofreceivers].balance + amount;
-      print(arr[choiceofsender].balance);
-      print(arr[choiceofreceivers].balance);
-      print("setstate was called");
+       print("setstate was called");
+         print(arr[choiceofsender-1].balance);
+      print(arr[choiceofreceivers-1].balance);
+      arr[choiceofsender-1].balance = arr[choiceofsender-1].balance - amount;
+      arr[choiceofreceivers-1].balance = arr[choiceofreceivers-1].balance + amount;
+        print("setstate job done");
+      print(arr[choiceofsender-1].balance);
+      print(arr[choiceofreceivers-1].balance);
+    
     });
     return 1;
   }
@@ -101,15 +105,15 @@ class _SendersState extends State<Senders> {
         child: SingleChildScrollView(
           child: Wrap(children: [
             WidgetBuilder(arr[0].name, arr[0].balance, arr[0].choice, arr[0]),
-            WidgetBuilder(obj2.name, obj2.balance, obj2.choice, obj2),
-            WidgetBuilder(obj3.name, obj3.balance, obj3.choice, obj3),
-            WidgetBuilder(obj4.name, obj4.balance, obj4.choice, obj4),
+            WidgetBuilder(arr[1].name, arr[1].balance, arr[1].choice, arr[1]),
+            WidgetBuilder(arr[2].name, arr[2].balance, arr[2].choice, arr[2]),
+            WidgetBuilder(arr[3].name, arr[3].balance, arr[3].choice, arr[3]),
             WidgetBuilder(arr[4].name, arr[4].balance, arr[4].choice, arr[4]),
-            WidgetBuilder(obj6.name, obj6.balance, obj6.choice, obj6),
-            WidgetBuilder(obj7.name, obj7.balance, obj7.choice, obj7),
-            WidgetBuilder(obj8.name, obj8.balance, obj8.choice, obj8),
-            WidgetBuilder(obj9.name, obj9.balance, obj9.choice, obj9),
-            WidgetBuilder(obj10.name, obj10.balance, obj10.choice, obj10),
+            WidgetBuilder(arr[5].name, arr[5].balance, arr[5].choice, arr[5]),
+            WidgetBuilder(arr[6].name, arr[6].balance, arr[6].choice, arr[6]),
+            WidgetBuilder(arr[7].name, arr[7].balance, arr[7].choice, arr[7]),
+            WidgetBuilder(arr[8].name, arr[8].balance, arr[8].choice, arr[8]),
+            WidgetBuilder(arr[9].name, arr[9].balance, arr[9].choice, arr[9]),
             Center(
               child: ElevatedButton(
                 onPressed: () {
@@ -125,7 +129,7 @@ class _SendersState extends State<Senders> {
   }
 }
 
-//AMOUNT.Dart
+
 
 
 
