@@ -1,17 +1,21 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'userlist.dart';
 import 'receivers.dart';
 import 'userobject.dart';
 import 'amount.dart';
+import 'dart:async';
+
+StreamController streamController = new StreamController();
 
 class Senders extends StatefulWidget {
-  const Senders({Key? key}) : super(key: key);
+  final Stream stream;
+  Senders(this.stream);
 
   @override
   _SendersState createState() => _SendersState();
-  
-  
 }
 
 double bal1 = 22000;
@@ -25,27 +29,34 @@ double bal8 = 25000;
 double bal9 = 27000;
 double bal10 = 22000;
 int choiceofsender = 0;
-late UserObject senderobj;
 
 class _SendersState extends State<Senders> {
-  Senders() {
-    print("Constructor called");
+  int updatebalance(double amount) {
+    setState(() {
+      arr[choiceofsender].balance = arr[choiceofsender].balance - amount;
+      arr[choiceofreceivers].balance = arr[choiceofreceivers].balance + amount;
+      print(arr[choiceofsender].balance);
+      print(arr[choiceofreceivers].balance);
+      print("setstate was called");
+    });
+    return 1;
+  }
+
+  void initState() {
+    super.initState();
+    widget.stream.listen((balance) {
+      updatebalance(balance);
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    whichchoicesenders(int choice, UserObject obj) {
+    whichchoicesenders(int choice, UserObject objs) {
       print('$choice was pressed');
       choiceofsender = choice;
-      obj.balance = 2000;
-      print(obj5.balance);  
-      //he object IS PASSED BY REFERENCE IN THIS MANNER OBJECTS ARE PASSED FROM ONE FUNCTION TO ANOTHER BY REFERENCE , BUT YOU CANT ASSIGN OBJECT TO BE COPIED TO ONE ANOTHER
-      
-      
-    }
 
-    
-    
+      //he object IS PASSED BY REFERENCE IN THIS MANNER OBJECTS ARE PASSED FROM ONE FUNCTION TO ANOTHER BY REFERENCE , BUT YOU CANT ASSIGN OBJECT TO BE COPIED TO ONE ANOTHER
+    }
 
     Container WidgetBuilder(
         String name, double balance, int choice, UserObject obj) {
@@ -89,11 +100,11 @@ class _SendersState extends State<Senders> {
       body: Center(
         child: SingleChildScrollView(
           child: Wrap(children: [
-            WidgetBuilder(obj1.name, obj1.balance, obj1.choice, obj1),
+            WidgetBuilder(arr[0].name, arr[0].balance, arr[0].choice, arr[0]),
             WidgetBuilder(obj2.name, obj2.balance, obj2.choice, obj2),
             WidgetBuilder(obj3.name, obj3.balance, obj3.choice, obj3),
             WidgetBuilder(obj4.name, obj4.balance, obj4.choice, obj4),
-            WidgetBuilder(obj5.name, obj5.balance, obj5.choice, obj5),
+            WidgetBuilder(arr[4].name, arr[4].balance, arr[4].choice, arr[4]),
             WidgetBuilder(obj6.name, obj6.balance, obj6.choice, obj6),
             WidgetBuilder(obj7.name, obj7.balance, obj7.choice, obj7),
             WidgetBuilder(obj8.name, obj8.balance, obj8.choice, obj8),
@@ -113,3 +124,8 @@ class _SendersState extends State<Senders> {
     );
   }
 }
+
+//AMOUNT.Dart
+
+
+

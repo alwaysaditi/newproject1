@@ -3,20 +3,19 @@ import 'receivers.dart';
 import 'userobject.dart';
 import 'senders.dart';
 
+
 class Amount extends StatefulWidget {
   const Amount({Key? key}) : super(key: key);
 
   @override
   _AmountState createState() => _AmountState();
-  
 }
 
 name() {
-  print(senderobj.name);
-  Senders object = Senders();
+
+  streamController.add(5000.toDouble());
 }
 
-String name1 = senderobj.name;
 
 class _AmountState extends State<Amount> {
   @override
@@ -39,6 +38,7 @@ class _AmountState extends State<Amount> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  ElevatedButton(onPressed: name, child: Text('thats me')),
                   Text(""),
                   Center(
                     child: ElevatedButton(

@@ -46,7 +46,7 @@ class MyHomePage extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Senders()),
+                        MaterialPageRoute(builder: (context) => Senders(streamController.stream)),
                       );
                     },
                     child: const Text('Transfer Money'),

@@ -7,9 +7,6 @@ class UserObject {
   int choice;
 
   UserObject(this.name, this.balance, this.email, this.choice);
-  UserObject copyWith(UserObject obj) {
-    return UserObject(this.name, this.balance, this.email, this.choice);
-  }
 }
 
 UserObject obj1 =
@@ -36,3 +33,16 @@ UserObject obj9 = UserObject('Lisa Hayden', 27000, 'lisahayden@gmail.com', 9);
 
 UserObject obj10 =
     UserObject('Jessica Brown', 22000, 'jessica.b24@gmail.com', 10);
+
+List<UserObject> arr = [
+  obj1,
+  obj2,
+  obj3,
+  obj4,
+  obj5,
+  obj6,
+  obj7,
+  obj8,
+  obj9,
+  obj10
+];

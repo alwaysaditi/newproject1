@@ -15,16 +15,15 @@ class Receivers extends StatefulWidget {
 int choiceofreceivers = 0;
 
 class _ReceiversState extends State<Receivers> {
- 
-
   @override
   Widget build(BuildContext context) {
     whichchoicereceivers(int choice) {
       print(
           '$choiceofsender is choice of sender and $choice is choice of receiver');
       choiceofreceivers = choice;
+      print(arr[0].balance);
+      print(arr[4].balance);
     }
-   
 
     Container WidgetBuilder(String name, double balance, int choice) {
       return Container(
