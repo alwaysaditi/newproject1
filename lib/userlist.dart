@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+
 class UserList extends StatelessWidget {
   whichchoice(int choice) {
     print('$choice was pressed');
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,7 +15,7 @@ class UserList extends StatelessWidget {
             child: Text('Registered Users'),
           ),
           backgroundColor: Colors.blue[200]),
-          backgroundColor: Colors.blue[100],
+      backgroundColor: Colors.blue[100],
       body: Center(
         child: SingleChildScrollView(
           child: Wrap(
@@ -31,7 +33,6 @@ class UserList extends StatelessWidget {
                         'aditiparetkar@gmail.com',
                       ),
                     ),
-                   
                   ],
                 ),
               ),
@@ -158,4 +159,3 @@ class UserList extends StatelessWidget {
     );
   }
 }
-

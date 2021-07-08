@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'userlist.dart';
 import 'senders.dart';
+import 'userobject.dart';
+import 'amount.dart';
 
 class Receivers extends StatefulWidget {
   const Receivers({Key? key}) : super(key: key);
@@ -13,9 +15,7 @@ class Receivers extends StatefulWidget {
 int choiceofreceivers = 0;
 
 class _ReceiversState extends State<Receivers> {
-  Senders() {
-    print("Constructor called");
-  }
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +24,7 @@ class _ReceiversState extends State<Receivers> {
           '$choiceofsender is choice of sender and $choice is choice of receiver');
       choiceofreceivers = choice;
     }
+   
 
     Container WidgetBuilder(String name, double balance, int choice) {
       return Container(
@@ -32,7 +33,7 @@ class _ReceiversState extends State<Receivers> {
               whichchoicereceivers(choice);
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => UserList()),
+                MaterialPageRoute(builder: (context) => Amount()),
               );
             },
             child: Column(
@@ -66,16 +67,16 @@ class _ReceiversState extends State<Receivers> {
       body: Center(
         child: SingleChildScrollView(
           child: Wrap(children: [
-            WidgetBuilder('Aditi Paretkar', bal1, 1),
-            WidgetBuilder('Arvind Paretkar', bal2, 2),
-            WidgetBuilder('Ashwini Paretkar', bal3, 3),
-            WidgetBuilder('Vishakha Paretkar', bal4, 4),
-            WidgetBuilder('Robert Green', bal5, 5),
-            WidgetBuilder('Arthur Hayden', bal6, 6),
-            WidgetBuilder('Daniel Brown', bal7, 7),
-            WidgetBuilder('Cathy Lane', bal8, 8),
-            WidgetBuilder('Lisa Hayden', bal9, 9),
-            WidgetBuilder('Jessica Brown', bal10, 10),
+            WidgetBuilder(obj1.name, obj1.balance, obj1.choice),
+            WidgetBuilder(obj2.name, obj2.balance, obj2.choice),
+            WidgetBuilder(obj3.name, obj3.balance, obj3.choice),
+            WidgetBuilder(obj4.name, obj4.balance, obj4.choice),
+            WidgetBuilder(obj5.name, obj5.balance, obj5.choice),
+            WidgetBuilder(obj6.name, obj6.balance, obj6.choice),
+            WidgetBuilder(obj7.name, obj7.balance, obj7.choice),
+            WidgetBuilder(obj8.name, obj8.balance, obj8.choice),
+            WidgetBuilder(obj9.name, obj9.balance, obj9.choice),
+            WidgetBuilder(obj10.name, obj10.balance, obj10.choice),
             Center(
               child: ElevatedButton(
                 onPressed: () {
