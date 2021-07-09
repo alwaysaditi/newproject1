@@ -55,18 +55,7 @@ class MyHomePage extends StatelessWidget {
                             MaterialStateProperty.all<Color>(Colors.black)),
                   ),
                   SizedBox(height: 10),
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => UserList()),
-                      );
-                    },
-                    child: const Text('View All Transfers'),
-                    style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all<Color>(Colors.black)),
-                  ),
+                
                   SizedBox(height: 10),
                 ],
               )),

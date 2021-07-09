@@ -8,7 +8,7 @@ import 'userobject.dart';
 import 'amount.dart';
 import 'dart:async';
 
-StreamController streamController = new StreamController();
+StreamController streamController = new StreamController.broadcast();
 
 class Senders extends StatefulWidget {
   final Stream stream;
@@ -70,7 +70,8 @@ class _SendersState extends State<Senders> {
               whichchoicesenders(choice, obj);
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Receivers()),
+                MaterialPageRoute(settings: RouteSettings(name: "/Receivers"),
+              builder: (context) => Receivers(),),
               );
             },
             child: Column(

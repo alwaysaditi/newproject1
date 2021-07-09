@@ -4,9 +4,13 @@ import 'userlist.dart';
 import 'senders.dart';
 import 'userobject.dart';
 import 'amount.dart';
+import 'dart:async';
+
+
 
 class Receivers extends StatefulWidget {
-  const Receivers({Key? key}) : super(key: key);
+   const Receivers({Key? key}) : super(key: key);
+ 
 
   @override
   _ReceiversState createState() => _ReceiversState();
@@ -17,11 +21,12 @@ int choiceofreceivers = 0;
 class _ReceiversState extends State<Receivers> {
   @override
   Widget build(BuildContext context) {
+
+
     whichchoicereceivers(int choice) {
       print(
           '$choiceofsender is choice of sender and $choice is choice of receiver');
       choiceofreceivers = choice;
-     
     }
 
     Container WidgetBuilder(String name, double balance, int choice) {
@@ -31,7 +36,9 @@ class _ReceiversState extends State<Receivers> {
               whichchoicereceivers(choice);
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Amount()),
+                MaterialPageRoute(
+                    settings: RouteSettings(name: "/Amount"),
+                    builder: (context) => Amount()),
               );
             },
             child: Column(
