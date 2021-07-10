@@ -20,13 +20,17 @@ name() {
 }
 
 addsomething() {
-  print("add something was called");
-  String rname = arr[choiceofreceivers-1].name;
-  String sname = arr[choiceofsender-1].name;
-  double amount1 = 5000.toDouble();
-  Transfers obj = Transfers(rname, sname, amount1);
- 
-  transferstream.add(obj);
+  int j;
+  for (j = 0; j < 1; j++) {
+    print("add something was called");
+    String rname = arr[choiceofreceivers - 1].name;
+    String sname = arr[choiceofsender - 1].name;
+    double amount1 = 5000.toDouble();
+    Transfers obj = Transfers(rname, sname, amount1);
+
+    transferstream.add(obj);
+  
+  }
 }
 
 class _AmountState extends State<Amount> {

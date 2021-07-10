@@ -10,6 +10,7 @@ import 'dart:async';
 import 'transferobj.dart';
 
 StreamController transferstream = StreamController.broadcast();
+int i = 0;
 
 class TransferRecord extends StatefulWidget {
   final Stream stream1;
@@ -20,51 +21,57 @@ class TransferRecord extends StatefulWidget {
 }
 
 List<Transfers> array = [];
-List<Card> children = [];
+List<Card> childrenobjects = [];
+int cal = 0;
+List<Card> finalchildren = childrenobjects.toSet().toList();
 
 class _TransferRecordState extends State<TransferRecord> {
+  late StreamSubscription _subscription;
   addTransfer(Transfers obj) {
-    array.add(obj);
-
     int j = 0;
     print("transferrecord accessed");
+
     for (j = 0; j < array.length; j++) {
       print("receiver name");
       print(array[j].rname);
     }
+    int k = 0;
+    array.add(obj);
+    _createChildren();
+    for (j = 0; j < childrenobjects.length - 1; j++) {
+      for (k = j; k < childrenobjects.length - 1; k++) {
+        if (array[j].rname == array[j + 1].rname) {
+          childrenobjects.remove(childrenobjects[j + 1]);
+          array.remove(array[j + 1]);
+        }
+      }
+    }
   }
 
+  @override
   void initState() {
     super.initState();
     widget.stream1.listen((obj) {
-      print("initstate accessed");
       addTransfer(obj);
     });
   }
 
-  List<Card> _createChildren() {
-    int i;
-    List<Card> children = [];
-    List<Card> finalchildren = [];
-
-    i = array.length;
-    for (i = 0; i < array.length; i++) {
-      children.add(Card(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            ListTile(
-              leading: Text(array[i].sname),
-              title: Text(array[i].rname),
-              subtitle: Text(array[i].amount.toString()),
-            ),
-            SizedBox(height: 10)
-          ],
-        ),
-      ));
-    }
-
-    return children;
+  void _createChildren() {
+    childrenobjects.add(Card(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          ListTile(
+            leading: Text(array[i].sname),
+            title: Text(array[i].rname),
+            subtitle: Text(array[i].amount.toString()),
+          ),
+          SizedBox(height: 10)
+        ],
+      ),
+    ));
+    finalchildren = childrenobjects.toSet().toList();
+    i = i + 1;
   }
 
   @override
@@ -86,7 +93,8 @@ class _TransferRecordState extends State<TransferRecord> {
             ),
             backgroundColor: Colors.blue[200]),
         backgroundColor: Colors.blue[300],
-        body: Center(child: Column(children: _createChildren())),
+        body: SingleChildScrollView(
+            child: Center(child: Column(children: childrenobjects))),
       );
   }
 }
