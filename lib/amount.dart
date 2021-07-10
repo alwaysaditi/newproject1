@@ -11,7 +11,7 @@ class Amount extends StatefulWidget {
 }
 
 name() {
-  streamController.add(5000.toDouble());
+  streamController.add((5000/2).toDouble());
 }
 
 class _AmountState extends State<Amount> {

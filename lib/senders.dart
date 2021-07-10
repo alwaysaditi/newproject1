@@ -71,7 +71,7 @@ class _SendersState extends State<Senders> {
               Navigator.push(
                 context,
                 MaterialPageRoute(settings: RouteSettings(name: "/Receivers"),
-              builder: (context) => Receivers(),),
+              builder: (context) => Receivers(streamController.stream),),
               );
             },
             child: Column(

@@ -9,7 +9,8 @@ import 'dart:async';
 
 
 class Receivers extends StatefulWidget {
-   const Receivers({Key? key}) : super(key: key);
+   final Stream stream;
+  Receivers(this.stream);
  
 
   @override
@@ -19,6 +20,27 @@ class Receivers extends StatefulWidget {
 int choiceofreceivers = 0;
 
 class _ReceiversState extends State<Receivers> {
+    int updatebalancer(double amount) {
+    setState(() {
+       print("setstate was called");
+         print(arr[choiceofsender-1].balance);
+      print(arr[choiceofreceivers-1].balance);
+      arr[choiceofsender-1].balance = arr[choiceofsender-1].balance - amount;
+      arr[choiceofreceivers-1].balance = arr[choiceofreceivers-1].balance + amount;
+        print("setstate job done");
+      print(arr[choiceofsender-1].balance);
+      print(arr[choiceofreceivers-1].balance);
+    
+    });
+    return 1;
+  }
+
+  void initState() {
+    super.initState();
+    widget.stream.listen((balance) {
+      updatebalancer(balance);
+    });
+  }
   @override
   Widget build(BuildContext context) {
 
