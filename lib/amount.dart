@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'receivers.dart';
 import 'userobject.dart';
 import 'senders.dart';
+import 'transferobj.dart';
+import 'transferecord.dart';
 
 class Amount extends StatefulWidget {
   const Amount({Key? key}) : super(key: key);
@@ -11,7 +13,20 @@ class Amount extends StatefulWidget {
 }
 
 name() {
-  streamController.add((5000/2).toDouble());
+  int i;
+  for (i = 0; i < 1; i++) {
+    streamController.add((5000).toDouble());
+  }
+}
+
+addsomething() {
+  print("add something was called");
+  String rname = arr[choiceofreceivers-1].name;
+  String sname = arr[choiceofsender-1].name;
+  double amount1 = 5000.toDouble();
+  Transfers obj = Transfers(rname, sname, amount1);
+ 
+  transferstream.add(obj);
 }
 
 class _AmountState extends State<Amount> {
@@ -45,7 +60,9 @@ class _AmountState extends State<Amount> {
                     },
                     child: Text('Go back!'),
                   ),
-                )
+                ),
+                ElevatedButton(
+                    onPressed: addsomething, child: Text('add transfer'))
               ],
             )),
       ),

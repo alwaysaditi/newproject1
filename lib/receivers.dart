@@ -25,8 +25,7 @@ class _ReceiversState extends State<Receivers> {
        print("setstate was called");
          print(arr[choiceofsender-1].balance);
       print(arr[choiceofreceivers-1].balance);
-      arr[choiceofsender-1].balance = arr[choiceofsender-1].balance - amount;
-      arr[choiceofreceivers-1].balance = arr[choiceofreceivers-1].balance + amount;
+     
         print("setstate job done");
       print(arr[choiceofsender-1].balance);
       print(arr[choiceofreceivers-1].balance);

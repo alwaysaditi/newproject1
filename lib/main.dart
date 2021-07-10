@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newproject1/transferecord.dart';
 import 'userlist.dart';
 import 'senders.dart';
 
@@ -55,7 +56,19 @@ class MyHomePage extends StatelessWidget {
                             MaterialStateProperty.all<Color>(Colors.black)),
                   ),
                   SizedBox(height: 10),
-                
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(settings: RouteSettings(name: "/TransferRecord"),
+              builder: (context) => TransferRecord(transferstream.stream)),
+                      );
+                    },
+                    child: const Text('View All Transfers'),
+                    style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(Colors.black)),
+                  ),
                   SizedBox(height: 10),
                 ],
               )),
