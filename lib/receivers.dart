@@ -76,8 +76,11 @@ class _ReceiversState extends State<Receivers> {
                 ),
               ],
             ),
-            style: ElevatedButton.styleFrom(
-              primary: Colors.blue[100],
+           style: ElevatedButton.styleFrom(
+              primary: Colors.purple[100],
+               onPrimary: Colors.white,
+      shadowColor: Colors.pink[50],
+      elevation: 5,
             ),
           ),
           padding: EdgeInsets.only(bottom: 10));
@@ -88,8 +91,8 @@ class _ReceiversState extends State<Receivers> {
           title: Center(
             child: Text('Select a Receiver'),
           ),
-          backgroundColor: Colors.blue[200]),
-      backgroundColor: Colors.blue[300],
+          backgroundColor: Colors.purple[300]),
+      backgroundColor: Colors.purple[50],
       body: Center(
         child: SingleChildScrollView(
           child: Wrap(children: [

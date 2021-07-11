@@ -58,6 +58,8 @@ class _TransferRecordState extends State<TransferRecord> {
 
   void _createChildren() {
     childrenobjects.add(Card(
+      shadowColor: Colors.purple.shade100,
+      color: Colors.pink.shade50,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
@@ -66,6 +68,7 @@ class _TransferRecordState extends State<TransferRecord> {
             title: Text(array[i].rname),
             subtitle: Text(array[i].amount.toString()),
           ),
+          
           SizedBox(height: 10)
         ],
       ),
@@ -82,19 +85,43 @@ class _TransferRecordState extends State<TransferRecord> {
               title: Center(
                 child: Text('Transfers Record'),
               ),
-              backgroundColor: Colors.blue[200]),
-          backgroundColor: Colors.blue[300],
-          body: Text('No transfers yet!'));
+              backgroundColor: Colors.purple[200]),
+          backgroundColor: Colors.purple[100],
+          body:  Center(
+                  child: Container(
+                    child: Text(
+                        "No Transfers Yet! " ,
+                           
+                            style: TextStyle(fontSize: 15 )),
+                            padding: EdgeInsets.all(10),  
+          margin: EdgeInsets.all(5),  
+            decoration: 
+          BoxDecoration(
+                      border: Border.all(color: Colors.black, width: 4),
+                      borderRadius: BorderRadius.circular(8),
+                      boxShadow: [
+                        new BoxShadow(
+                            color: Colors.purple.shade300,
+                            offset: new Offset(6.0, 6.0),
+                            blurRadius: 10.0,
+                            spreadRadius: 5.0),
+                      ],
+                    ),
+                  ),
+             )
+                );
     } else
       return Scaffold(
         appBar: AppBar(
             title: Center(
               child: Text('Transfers Record'),
             ),
-            backgroundColor: Colors.blue[200]),
-        backgroundColor: Colors.blue[300],
+            
+            backgroundColor: Colors.purple[200]),
+        backgroundColor: Colors.purple[100],
         body: SingleChildScrollView(
-            child: Center(child: Column(children: childrenobjects))),
+            child: Center(child: Column(children: childrenobjects))
+            ),
       );
   }
 }

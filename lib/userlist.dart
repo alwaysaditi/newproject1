@@ -14,13 +14,14 @@ class UserList extends StatelessWidget {
           title: Center(
             child: Text('Registered Users'),
           ),
-          backgroundColor: Colors.blue[200]),
-      backgroundColor: Colors.blue[100],
+          backgroundColor: Colors.purple[200]),
+      backgroundColor: Colors.pink[100],
       body: Center(
         child: SingleChildScrollView(
           child: Wrap(
             children: [
               Card(
+              color: Colors.pink.shade50,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
@@ -37,6 +38,7 @@ class UserList extends StatelessWidget {
                 ),
               ),
               Card(
+                color: Colors.pink.shade50,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
@@ -49,6 +51,7 @@ class UserList extends StatelessWidget {
                 ),
               ),
               Card(
+                color: Colors.pink.shade50,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
@@ -61,95 +64,109 @@ class UserList extends StatelessWidget {
                 ),
               ),
               Card(
+                color: Colors.pink.shade50,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     const ListTile(
                       leading: Icon(FontAwesomeIcons.laugh),
-                      title: Text('Vishakha Paretkar'),
-                      subtitle: Text('vishkaha.cp@gmail.com'),
+                      title: Text('Sheldon Cooper'),
+                      subtitle: Text('sheldon.cp@gmail.com'),
                     ),
                   ],
                 ),
               ),
               Card(
+                color: Colors.pink.shade50,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     const ListTile(
                       leading: Icon(FontAwesomeIcons.laugh),
-                      title: Text('Robert Green'),
-                      subtitle: Text('robert.vg@gmail.com'),
+                      title: Text('Rachel Green'),
+                      subtitle: Text('rachel.vg@gmail.com'),
                     ),
                   ],
                 ),
               ),
               Card(
+                color: Colors.pink.shade50,
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: <Widget>[
                     const ListTile(
                       leading: Icon(FontAwesomeIcons.laugh),
-                      title: Text('Arthur Hayden'),
-                      subtitle: Text('arthur01@gmail.com'),
+                      title: Text('Chandler Bing'),
+                      subtitle: Text('chandler01@gmail.com'),
                     ),
                   ],
                 ),
               ),
               Card(
+                color: Colors.pink.shade50,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     const ListTile(
                       leading: Icon(FontAwesomeIcons.laugh),
-                      title: Text('Daniel Brown'),
-                      subtitle: Text('daniel.b101@gmail.com'),
+                      title: Text('Monica Geller'),
+                      subtitle: Text('monica.g101@gmail.com'),
                     ),
                   ],
                 ),
               ),
               Card(
+                color: Colors.pink.shade50,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     const ListTile(
                       leading: Icon(FontAwesomeIcons.laugh),
-                      title: Text('Cathy Lane'),
-                      subtitle: Text('cathy.rp@gmail.com'),
+                      title: Text('Ross Geller'),
+                      subtitle: Text('rossgeller@gmail.com'),
                     ),
                   ],
                 ),
               ),
               Card(
+                color: Colors.pink.shade50,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     const ListTile(
                       leading: Icon(FontAwesomeIcons.laugh),
-                      title: Text('Lisa Hayden'),
-                      subtitle: Text('lisahayden@gmail.com'),
+                      title: Text('Joey Tribbiani'),
+                      subtitle: Text('joey101@gmail.com'),
                     ),
                   ],
                 ),
               ),
               Card(
+                color: Colors.pink.shade50,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     const ListTile(
                       leading: Icon(FontAwesomeIcons.laugh),
-                      title: Text('Jessica Brown'),
-                      subtitle: Text('jessica.b24@gmail.com'),
+                      title: Text('Phoebe Buffay'),
+                      subtitle: Text('phoebe.b24@gmail.com'),
                     ),
                   ],
                 ),
               ),
               Center(
+                
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.pop(context);
                   },
                   child: Text('Go back!'),
+                                 style: ElevatedButton.styleFrom(
+              primary: Colors.purple[300],
+               onPrimary: Colors.white,
+      shadowColor: Colors.pink[50],
+      elevation: 5,
+            )
                 ),
               )
             ],

@@ -89,7 +89,10 @@ class _SendersState extends State<Senders> {
               ],
             ),
             style: ElevatedButton.styleFrom(
-              primary: Colors.blue[100],
+              primary: Colors.purple[100],
+               onPrimary: Colors.white,
+      shadowColor: Colors.pink[50],
+      elevation: 5,
             ),
           ),
           padding: EdgeInsets.only(bottom: 10));
@@ -100,8 +103,8 @@ class _SendersState extends State<Senders> {
           title: Center(
             child: Text('Select a Sender'),
           ),
-          backgroundColor: Colors.blue[200]),
-      backgroundColor: Colors.blue[300],
+          backgroundColor: Colors.purple[200]),
+      backgroundColor: Colors.purple[50],
       body: Center(
         child: SingleChildScrollView(
           child: Wrap(children: [
@@ -121,6 +124,12 @@ class _SendersState extends State<Senders> {
                   Navigator.pop(context);
                 },
                 child: Text('Go back!'),
+                 style: ElevatedButton.styleFrom(
+              primary: Colors.purple[200],
+               onPrimary: Colors.white,
+      shadowColor: Colors.pink[50],
+      elevation: 5,
+            )
               ),
             ),
           ]),

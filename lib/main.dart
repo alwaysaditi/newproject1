@@ -19,7 +19,7 @@ class MyHomePage extends StatelessWidget {
             // Here we take the value from the MyHomePage object that was created by
             // the App.build method, and use it to set our appbar title.
             title: Center(child: Text('Banking Application')),
-            backgroundColor: Colors.teal[200]),
+            backgroundColor: Colors.purple[200]),
         body: Builder(
           builder: (context) => Container(
               constraints: BoxConstraints.expand(),
@@ -28,6 +28,7 @@ class MyHomePage extends StatelessWidget {
                       fit: BoxFit.fill,
                       image: AssetImage('assets/images/frontpage.jpeg'))),
               child: Column(
+                
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ElevatedButton(

@@ -4,6 +4,7 @@ import 'userobject.dart';
 import 'senders.dart';
 import 'transferobj.dart';
 import 'transferecord.dart';
+import 'paymentack.dart';
 
 class Amount extends StatefulWidget {
   const Amount({Key? key}) : super(key: key);
@@ -44,8 +45,8 @@ class _AmountState extends State<Amount> {
       appBar: AppBar(
           // Here we take the value from the MyHomePage object that was created by
           // the App.build method, and use it to set our appbar title.
-          title: Center(child: Text('Banking Application')),
-          backgroundColor: Colors.teal[200]),
+          title: Center(child: Text('Amount to be Paid')),
+          backgroundColor: Colors.purple[200]),
       backgroundColor: Colors.blue,
       body: Builder(
         builder: (context) => Container(
@@ -55,51 +56,96 @@ class _AmountState extends State<Amount> {
                     fit: BoxFit.fill,
                     image: AssetImage('assets/images/frontpage.jpeg'))),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Center(
-                  child: Text(
-                      "Enter the amount of money to be transerred from " +
-                          arr[choiceofsender - 1].name +
-                          "\n to " +
-                          arr[choiceofreceivers - 1].name),
+                  child: Container(
+                    child: Text(
+                        "Enter the amount of money to be transferred from " +
+                            arr[choiceofsender - 1].name +
+                            " to " +
+                            arr[choiceofreceivers - 1].name,
+                        style: TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.bold)),
+                    padding: EdgeInsets.all(10),
+                    margin: EdgeInsets.all(5),
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.black, width: 4),
+                      borderRadius: BorderRadius.circular(8),
+                      boxShadow: [
+                        new BoxShadow(
+                            color: Colors.purple.shade100,
+                            offset: new Offset(6.0, 6.0),
+                            blurRadius: 10.0,
+                            spreadRadius: 5.0),
+                      ],
+                    ),
+                  ),
                 ),
 
                 Container(
                     child: TextField(
-                        controller: myController,
-                        onChanged: (text) {
-                          print(text);
-                        }),
-
-                        
+                      controller: myController,
+                      onChanged: (text) {
+                        print(text);
+                      },
+                      decoration: new InputDecoration(
+                        focusedBorder: OutlineInputBorder(
+                          borderSide:
+                              BorderSide(color: Colors.blue, width: 5.0),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide:
+                              BorderSide(color: Colors.purple, width: 5.0),
+                        ),
+                        hintText: 'Enter Amount',
+                      ),
+                   style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25,
+                   color: Colors.black) ,
+                   ),
                     margin: EdgeInsets.all(30)),
-                  
-  // When the user presses the button, show an alert dialog containing the
-  // text that the user has entered into the text field.
 
-              
+                // When the user presses the button, show an alert dialog containing the
+                // text that the user has entered into the text field.
+
                 Center(
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       ElevatedButton(
                         onPressed: () {
                           name(double.parse(myController.text));
                         },
                         child: Text('Confirm'),
-                      ),
+                         style: ElevatedButton.styleFrom(
+              primary: Colors.red[300],
+               onPrimary: Colors.white,
+      shadowColor: Colors.pink[50],
+      elevation: 5,
+            )  ),
                       SizedBox(width: 10),
                       ElevatedButton(
                           onPressed: () {
                             addsomething(double.parse(myController.text));
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  settings: RouteSettings(name: "/PaymentAck"),
+                                  builder: (context) => PaymentAck()),
+                            );
                           },
-                          child: Text('Make Payment')),
+                          child: Text('Make Payment'),
+                               style: ElevatedButton.styleFrom(
+              primary: Colors.purple[300],
+               onPrimary: Colors.white,
+      shadowColor: Colors.pink[50],
+      elevation: 5,
+            )),
                     ],
                   ),
                 ),
 
                 SizedBox(height: 10),
-             
               ],
             )),
       ),
