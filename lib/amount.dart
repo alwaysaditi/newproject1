@@ -64,33 +64,42 @@ class _AmountState extends State<Amount> {
                           "\n to " +
                           arr[choiceofreceivers - 1].name),
                 ),
-                
-                Container(child: TextField(controller: myController),
-                margin: EdgeInsets.all(30)),
-              SizedBox(height: 20),
-                Center(
-                  child: Row(children: [ ElevatedButton(
-                    onPressed: () {
-                      name(5000.toDouble());
-                    },
-                    child: Text('Confirm'),
-                  ),
+
+                Container(
+                    child: TextField(
+                        controller: myController,
+                        onChanged: (text) {
+                          print(text);
+                        }),
+
+                        
+                    margin: EdgeInsets.all(30)),
                   
-                  SizedBox(width: 10),
-                  ElevatedButton(
-                      onPressed :() {addsomething(5000.toDouble());},
-                      child: Text('Make Payment')),],),
-                ),
-               
-                SizedBox(height: 10),
+  // When the user presses the button, show an alert dialog containing the
+  // text that the user has entered into the text field.
+
+              
                 Center(
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: Text('Go back!'),
+                  child: Row(
+                    children: [
+                      ElevatedButton(
+                        onPressed: () {
+                          name(double.parse(myController.text));
+                        },
+                        child: Text('Confirm'),
+                      ),
+                      SizedBox(width: 10),
+                      ElevatedButton(
+                          onPressed: () {
+                            addsomething(double.parse(myController.text));
+                          },
+                          child: Text('Make Payment')),
+                    ],
                   ),
-                )
+                ),
+
+                SizedBox(height: 10),
+             
               ],
             )),
       ),
