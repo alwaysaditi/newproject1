@@ -19,7 +19,8 @@ Senders/Receivers Selection:
 ![Screenshot_20210712-000812](https://user-images.githubusercontent.com/68003668/125206738-6b71ca00-e2a6-11eb-9a48-692200f5208e.jpg)
 
 Amount To be paid
-![Screenshot_20210712-000818](https://user-images.githubusercontent.com/68003668/125206766-83e1e480-e2a6-11eb-9253-dd633abcd0c9.jpg)
+![Screenshot_20210712-000723](https://user-images.githubusercontent.com/68003668/125206944-55183e00-e2a7-11eb-9bbe-230c9167692e.jpg)
+
 
 On succesful Payment
 
