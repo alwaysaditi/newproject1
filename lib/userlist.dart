@@ -148,7 +148,8 @@ class UserList extends StatelessWidget {
                   children: <Widget>[
                     const ListTile(
                       leading: Icon(FontAwesomeIcons.laugh),
-                      title: Text('Phoebe Buffay'),
+                      title: Text('Phoebe Buffay',
+                      ),
                       subtitle: Text('phoebe.b24@gmail.com'),
                     ),
                   ],

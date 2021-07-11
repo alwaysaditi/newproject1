@@ -19,7 +19,7 @@ class _PaymentAckState extends State<PaymentAck> {
       appBar: AppBar(
           // Here we take the value from the MyHomePage object that was created by
           // the App.build method, and use it to set our appbar title.
-          title: Center(child: Text('Amount to be Paid')),
+          title: Center(child: Text('Payment Acknowledgement')),
           backgroundColor: Colors.purple[200]),
       backgroundColor: Colors.blue,
       body: Builder(

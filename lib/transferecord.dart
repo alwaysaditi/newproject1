@@ -65,7 +65,8 @@ class _TransferRecordState extends State<TransferRecord> {
         children: <Widget>[
           ListTile(
             leading: Text(array[i].sname),
-            title: Text(array[i].rname),
+            title: Text(array[i].rname
+            ),
             subtitle: Text(array[i].amount.toString()),
           ),
           

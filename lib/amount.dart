@@ -5,6 +5,7 @@ import 'senders.dart';
 import 'transferobj.dart';
 import 'transferecord.dart';
 import 'paymentack.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Amount extends StatefulWidget {
   const Amount({Key? key}) : super(key: key);
@@ -45,7 +46,8 @@ class _AmountState extends State<Amount> {
       appBar: AppBar(
           // Here we take the value from the MyHomePage object that was created by
           // the App.build method, and use it to set our appbar title.
-          title: Center(child: Text('Amount to be Paid')),
+          title: Center(child: Text('Amount to be paid',
+         style: GoogleFonts.merienda() )),
           backgroundColor: Colors.purple[200]),
       backgroundColor: Colors.blue,
       body: Builder(
@@ -65,8 +67,8 @@ class _AmountState extends State<Amount> {
                             arr[choiceofsender - 1].name +
                             " to " +
                             arr[choiceofreceivers - 1].name,
-                        style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.bold)),
+                        style: GoogleFonts.neuton(textStyle:TextStyle(fontSize: 15,
+                    color: Colors.black) ),),
                     padding: EdgeInsets.all(10),
                     margin: EdgeInsets.all(5),
                     decoration: BoxDecoration(

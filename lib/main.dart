@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:newproject1/transferecord.dart';
 import 'userlist.dart';
 import 'senders.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MyHomePage());
@@ -18,7 +19,8 @@ class MyHomePage extends StatelessWidget {
         appBar: AppBar(
             // Here we take the value from the MyHomePage object that was created by
             // the App.build method, and use it to set our appbar title.
-            title: Center(child: Text('Banking Application')),
+            title: Center(child: Text('Banking Application',
+            style:GoogleFonts.merienda())),
             backgroundColor: Colors.purple[200]),
         body: Builder(
           builder: (context) => Container(

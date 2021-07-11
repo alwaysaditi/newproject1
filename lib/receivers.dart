@@ -5,6 +5,7 @@ import 'senders.dart';
 import 'userobject.dart';
 import 'amount.dart';
 import 'dart:async';
+import 'package:google_fonts/google_fonts.dart';
 
 
 
@@ -69,6 +70,8 @@ class _ReceiversState extends State<Receivers> {
                   leading: Icon(FontAwesomeIcons.laugh),
                   title: Text(
                     '$name',
+                     style: GoogleFonts.cookie(textStyle: TextStyle(fontSize: 30,
+                    color: Colors.purple.shade400))
                   ),
                   subtitle: Text(
                     'Balance: $balance',
@@ -89,7 +92,8 @@ class _ReceiversState extends State<Receivers> {
     return Scaffold(
       appBar: AppBar(
           title: Center(
-            child: Text('Select a Receiver'),
+            child: Text('Select a Receiver',
+             style:GoogleFonts.merienda()),
           ),
           backgroundColor: Colors.purple[300]),
       backgroundColor: Colors.purple[50],

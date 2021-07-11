@@ -7,6 +7,7 @@ import 'receivers.dart';
 import 'userobject.dart';
 import 'amount.dart';
 import 'dart:async';
+import 'package:google_fonts/google_fonts.dart';
 
 StreamController streamController = new StreamController.broadcast();
 
@@ -81,6 +82,9 @@ class _SendersState extends State<Senders> {
                   leading: Icon(FontAwesomeIcons.laugh),
                   title: Text(
                     '$name',
+                    style: GoogleFonts.cookie(textStyle: TextStyle(fontSize: 30,
+                    color: Colors.purple.shade400)),
+                    
                   ),
                   subtitle: Text(
                     'Balance: $balance',
@@ -101,7 +105,8 @@ class _SendersState extends State<Senders> {
     return Scaffold(
       appBar: AppBar(
           title: Center(
-            child: Text('Select a Sender'),
+            child: Text('Select a Sender',
+            style: GoogleFonts.merienda()),
           ),
           backgroundColor: Colors.purple[200]),
       backgroundColor: Colors.purple[50],
