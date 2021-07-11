@@ -26,7 +26,8 @@ On succesful Payment
 ![Screenshot_20210712-001903](https://user-images.githubusercontent.com/68003668/125206875-ffdc2c80-e2a6-11eb-8dc7-4fc3ee3026e4.jpg)
 
 Recording transfers (after 2 transfers):
-![Screenshot_20210712-000858](https://user-images.githubusercontent.com/68003668/125206796-abd14800-e2a6-11eb-8169-7031f5f573f1.jpg)
+![Screenshot_20210712-000905](https://user-images.githubusercontent.com/68003668/125207024-c8ba4b00-e2a7-11eb-9b1e-65b695d91213.jpg)
+
 
 
 
